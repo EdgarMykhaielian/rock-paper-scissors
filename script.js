@@ -4,11 +4,26 @@ const oppChoiceImg = document.querySelector(".opp-choice")
 const iconContainer = document.querySelector(".icons")
 const resultsContainer = document.querySelector(".results")
 const resultsInfo = document.querySelector(".result")
+const [wonCounter, lostCounter, drawCounter] = document.querySelectorAll("dd")
+const restartBtn = document.querySelector(".restart-btn")
+
+// THIS IS THE SAME AS LINE 7{
+//     const descriptions = document.querySelectorAll("dd")
+//     const wonCounter = descriptions[0]
+//     const lostCounter = descriptions[1]
+//     const drawCounter = descriptions[2]
+// }
+
 const stats = {'WON':0, 'LOST':0, 'DRAW':0}
 
 for (const button of buttons) {
     button.onclick = handleMove
     // button.onclick = console.log
+}
+
+restartBtn.onclick = () => {
+    iconContainer.hidden = false
+    resultsContainer.hidden = true
 }
 
 function handleMove(event) {
@@ -33,7 +48,9 @@ function handleMove(event) {
 }
 
 function updateStats(){
-    
+    wonCounter.innerText = stats['WON']
+    lostCounter.innerText = stats['LOST']
+    drawCounter.innerText = stats['DRAW']
 }
 
 function showResult(result, userChoice, oppChoice) {
@@ -74,3 +91,4 @@ function selectRandom(...choices) {
     const i = Math.floor(Math.random() * choices.length)
     return choices[i]
 }
+
