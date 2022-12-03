@@ -1,3 +1,4 @@
+
 body {
     text-align: center;
 }
@@ -8,16 +9,22 @@ h1 {
 h6 {
     font-size: 40px;
     color: red;
+    margin: 0 auto 40px;
 }
-
+.main {
+    height: 40vw;
+}
 .icons {
     max-width: 1200px;
     display: flex;
     margin: 0 auto;
     gap: 70px;
+    align-items: center;
+    justify-content: center;
 
 }
 .button {
+    box-sizing: border-box;
     width: 20vw;
     height: 20vw;
     border-style: none;
@@ -25,7 +32,9 @@ h6 {
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: top;
-    padding-top: 15%;
+    font-size: 4vw;
+    transition: 0.5s;
+    line-height: 45vw;
 }
 .rock {
     background-image: url(./assets/rock_icon.svg);
@@ -36,4 +45,12 @@ h6 {
 .scissors {
     background-image: url(./assets/scissors_icon.svg);
 }
+.button:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
+}
 
+.stats {
+    display: flex;
+    justify-content: center;
+}
