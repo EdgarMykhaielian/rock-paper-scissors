@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+}
+h1 {
+    font-size: 60px;
+    color: blue;
+}
+h6 {
+    font-size: 40px;
+    color: red;
+}
+
+.icons {
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    gap: 70px;
+
+}
+.button {
+    width: 20vw;
+    height: 20vw;
+    border-style: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: top;
+    padding-top: 15%;
+}
+.rock {
+    background-image: url(./assets/rock_icon.svg);
+}
+.paper {
+    background-image: url(./assets/paper_icon.svg);
+}
+.scissors {
+    background-image: url(./assets/scissors_icon.svg);
+}
+
